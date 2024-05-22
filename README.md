@@ -18,7 +18,7 @@ define('GITHUB_AUTH_TOKEN', 'seu-token-aqui');
 Inclua e configure o script no functions.php do seu tema:
 
 ```php
-require get_template_directory() . '/theme-update-checker/theme-update-checker.php';
+require get_template_directory() . '/theme-update-checker.php';
 
 Definir usuário e repositório do GitHub
 ```php
