@@ -12,7 +12,7 @@ Defina o token do GitHub no `wp-config.php`:
 define('GITHUB_AUTH_TOKEN', 'seu-novo-token-aqui');
 ```
 
-Inclua a biblioteca `theme-update-checker` no `functions.php` do seu tema:
+Inclua o arquivo `theme-update-checker.php` no `functions.php` do seu tema:
 
 ```php
 require get_template_directory() . '/theme-update-checker/theme-update-checker.php';
