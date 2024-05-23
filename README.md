@@ -24,6 +24,8 @@ $github_username = 'seu-usuario';// Nome do usuário do github.com
 $repository_name = 'seu-repositorio'; //Repositorio usado para hospedar os arquivos do Tema
 
 add_theme_update_hooks($github_username, $repository_name, GITHUB_AUTH_TOKEN);
+//Caso não queira definir GITHUB_AUTH_TOKEN no wp-config.php, você pode adicionar seu token diretamente no codigo. O codigo vai ficar conforme abaixo
+//add_theme_update_hooks($github_username, $repository_name, 'seu-novo-token-aqui');
  ```
 Criar Releases e Tags no GitHub
 Para que o script funcione corretamente, você precisa criar releases e associar tags no repositório GitHub do seu tema:
