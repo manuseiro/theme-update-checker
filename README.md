@@ -19,9 +19,6 @@ define('GITHUB_AUTH_TOKEN', 'seu-token-aqui');
 
 ```php
 require get_template_directory() . '/theme-update-checker/theme-update-checker.php';
-```
-
-5. Definir o usuário e repositório do GitHub onde está localizado os aruivos do tema
 
 ```php
 $github_username = 'seu-usuario';
