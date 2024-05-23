@@ -194,7 +194,7 @@ function theme_api_check($false, $action, $response, $github_username, $reposito
     return $response;
 }
 
-// Hooks para verificar atualizações de tema e adicionar informações adicionais sobre o tema
+// Função para adicionar hooks de atualização do tema
 function add_theme_update_hooks($github_username, $repository_name, $access_token) {
     add_filter('pre_set_site_transient_update_themes', function($checked_data) use ($github_username, $repository_name, $access_token) {
         return check_for_theme_updates($checked_data, $github_username, $repository_name, $access_token);
@@ -204,3 +204,5 @@ function add_theme_update_hooks($github_username, $repository_name, $access_toke
         return theme_api_check($false, $action, $response, $github_username, $repository_name, $access_token);
     }, 10, 3);
 }
+
+?>
