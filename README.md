@@ -21,7 +21,7 @@ require get_template_directory() . '/theme-update-checker/theme-update-checker.p
 No arquivo `functions.php`, configure o usuário e repositório do GitHub:
 ```php
 $github_username = 'seu-usuario';// Nome do usuário do github.com
-$repository_name = 'seu-repositorio';Repositorio usado para hospedar os arquivos do Tema
+$repository_name = 'seu-repositorio'; //Repositorio usado para hospedar os arquivos do Tema
 
 add_theme_update_hooks($github_username, $repository_name, GITHUB_AUTH_TOKEN);
  ```
