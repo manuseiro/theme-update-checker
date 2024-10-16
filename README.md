@@ -22,7 +22,7 @@ define('GITHUB_AUTH_TOKEN', 'seu-novo-token-aqui');
 
 ### Passo 2: Incluir a Biblioteca no Tema
 
-No arquivo functions.php do seu tema, inclua a biblioteca:
+No arquivo `functions.php` do seu tema, inclua a biblioteca:
 
 ```php
 require get_template_directory() . '/theme-update-checker/theme-update-checker.php';
