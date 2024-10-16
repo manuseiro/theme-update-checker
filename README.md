@@ -1,49 +1,67 @@
 # Theme Update Checker
 
-Esta é uma biblioteca de verificação de atualização personalizada para temas do WordPress. Ele permite adicionar notificações de atualização automática e atualizações com um clique aos seus temas privados. Tudo o que você precisa fazer é colocar os detalhes do seu tema no arquivo 'style.css'. A biblioteca verifica periodicamente a URL para ver se há uma nova versão disponível e exibe uma notificação de atualização ao usuário, se necessário.
+**Theme Update Checker** é uma biblioteca de verificação de atualização personalizada para temas do WordPress. Esta ferramenta permite adicionar notificações de atualização automática e atualizações com um clique para seus temas privados. Basta fornecer os detalhes do seu tema no arquivo `style.css`, e a biblioteca se encarregará de verificar periodicamente a URL para novas versões, exibindo uma notificação ao usuário quando necessário.
 
-O verificador de atualização usa a interface de atualização padrão que é familiar para a maioria dos usuários do WordPress.
+A interface de atualização utilizada é a padrão do WordPress, proporcionando uma experiência familiar para os usuários.
+
+## Funcionalidades
+
+- **Notificações Automáticas**: Alerta os usuários sobre novas versões disponíveis.
+- **Atualizações com um Clique**: Facilita a atualização dos temas diretamente do painel do WordPress.
+- **Fácil Integração**: Simples de configurar e usar com qualquer tema do WordPress.
 
 ## Instalação
 
-Defina o token do GitHub no `wp-config.php`:
+### Passo 1: Definir o Token do GitHub
+
+Adicione o seguinte código ao seu `wp-config.php`:
 
 ```php
 define('GITHUB_AUTH_TOKEN', 'seu-novo-token-aqui');
 ```
 
-Inclua o arquivo `theme-update-checker.php` no `functions.php` do seu tema:
+### Passo 2: Incluir a Biblioteca no Tema
+
+No arquivo functions.php do seu tema, inclua a biblioteca:
 
 ```php
 require get_template_directory() . '/theme-update-checker/theme-update-checker.php';
 ```
 
-No arquivo `functions.php`, configure o usuário e repositório do GitHub:
+### Passo 3: Configurar o Usuário e Repositório do GitHub
+
+Adicione as seguintes linhas ao seu `functions.php`:
+
 ```php
-$github_username = 'seu-usuario';// Nome do usuário do github.com
-$repository_name = 'seu-repositorio'; //Repositorio usado para hospedar os arquivos do Tema
+$github_username = 'seu-usuario'; // Nome do usuário do github.com
+$repository_name = 'seu-repositorio'; // Repositório usado para hospedar os arquivos do tema
 
 add_theme_update_hooks($github_username, $repository_name, GITHUB_AUTH_TOKEN);
-//Caso não queira definir GITHUB_AUTH_TOKEN no wp-config.php, você pode adicionar seu token diretamente no codigo. O codigo vai ficar conforme abaixo
-//add_theme_update_hooks($github_username, $repository_name, 'seu-novo-token-aqui');
- ```
-Criar Releases e Tags no GitHub
-Para que o script funcione corretamente, você precisa criar releases e associar tags no repositório GitHub do seu tema:
 
-Criar uma Release no GitHub:
+// Caso não queira definir GITHUB_AUTH_TOKEN no wp-config.php, você pode adicionar seu token diretamente no código:
+// add_theme_update_hooks($github_username, $repository_name, 'seu-novo-token-aqui');
+```
+
+### Passo 4: Criar Releases e Tags no GitHub
+
+Para que a biblioteca funcione corretamente, é necessário criar releases e associar tags no seu repositório do 
+
+GitHub. Siga os passos abaixo:
 1. Vá para a página do seu repositório no GitHub.
-2. Clique na aba "Releases" na parte superior.
-3. Clique no botão "Draft a new release".
+2. Clique na aba Releases na parte superior.
+3. Clique no botão Draft a new release.
 4. Preencha os campos:
 - Tag version: A tag correspondente à versão do seu tema, por exemplo, v1.0.0.
 - Release title: Um título descritivo para a release.
-- Description: Uma descrição detalhada das mudanças nesta versão.
+- Description: Descrição detalhada das mudanças nesta versão.
 5. Faça upload do arquivo zip do seu tema no campo "Attach binaries by dropping them here or selecting them".
-6. Clique em "Publish release".
+6. Clique em Publish release.
+
+### Passo 5: Atualizar o style.css
 
 No arquivo `style.css` do seu tema, certifique-se de que a versão do tema está corretamente definida. Por exemplo:
 
-```CSS
+```css
 /*
 Theme Name: Nome do Tema
 Theme URI: http://seudominio.com
@@ -57,15 +75,42 @@ Text Domain: seutema
 */
 ```
 
-Use a função `debug_theme_update_process` para verificar se o processo de atualização está funcionando corretamente:
+### (Opcional) Depuração
 
-4. (Opcional) Use a função `debug_theme_update_process` para depuração:
-    ```php
-    debug_theme_update_process(update_theme_from_github($github_username, $repository_name, GITHUB_AUTH_TOKEN));
-    ```
+Utilize a função `debug_theme_update_process` para verificar se o processo de atualização está funcionando corretamente:
+
+```php
+debug_theme_update_process(update_theme_from_github($github_username, $repository_name, GITHUB_AUTH_TOKEN));
+```
+
+## Contribuindo
+
+Contribuições são bem-vindas! Se você deseja contribuir para este projeto, siga as etapas abaixo:
+
+1. Fork o repositório: Crie uma cópia do repositório em sua conta do GitHub.
+2. Crie uma branch para sua feature:
+```bash
+	git checkout -b minha-feature
+```
+3. Realize suas alterações e commit:
+```bash
+	git commit -m 'Adiciona nova feature'
+```
+4. Envie para o repositório:
+```bash
+	git push origin minha-feature
+```
+5. Crie um Pull Request: Descreva suas alterações e submeta.
 
 ## Licença
 
-Este projeto está licenciado sob a licença MIT.
+Este projeto está licenciado sob a licença MIT. Consulte o arquivo LICENSE para mais detalhes.
+Suporte
 
-    
+Se você encontrar problemas ou tiver dúvidas, sinta-se à vontade para abrir um issue no repositório.
+
+Agradecemos por considerar a contribuição para o Theme Update Checker! Estamos ansiosos para ver o que você pode adicionar!
+
+
+
+
