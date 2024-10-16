@@ -83,33 +83,15 @@ Utilize a função `debug_theme_update_process` para verificar se o processo de 
 debug_theme_update_process(update_theme_from_github($github_username, $repository_name, GITHUB_AUTH_TOKEN));
 ```
 
-## Contribuindo
-
-Contribuições são bem-vindas! Se você deseja contribuir para este projeto, siga as etapas abaixo:
-
-1. Fork o repositório: Crie uma cópia do repositório em sua conta do GitHub.
-2. Crie uma branch para sua feature:
-```bash
-	git checkout -b minha-feature
-```
-3. Realize suas alterações e commit:
-```bash
-	git commit -m 'Adiciona nova feature'
-```
-4. Envie para o repositório:
-```bash
-	git push origin minha-feature
-```
-5. Crie um Pull Request: Descreva suas alterações e submeta.
-
 ## Licença
 
-Este projeto está licenciado sob a licença MIT. Consulte o arquivo LICENSE para mais detalhes.
-Suporte
+Este projeto está licenciado sob a [Licença MIT](LICENSE).
 
-Se você encontrar problemas ou tiver dúvidas, sinta-se à vontade para abrir um issue no repositório.
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) [![GitHub issues](https://img.shields.io/github/issues/manuseiro/theme-update-checker)](https://github.com/manuseiro/theme-update-checker/issues) [![GitHub forks](https://img.shields.io/github/forks/manuseiro/theme-update-checker)](https://github.com/manuseiro/theme-update-checker/network) [![GitHub stars](https://img.shields.io/github/stars/manuseiro/theme-update-checker)](https://github.com/manuseiro/theme-update-checker/stargazers) [![GitHub contributors](https://img.shields.io/github/contributors/manuseiro/theme-update-checker)](https://github.com/manuseiro/theme-update-checker/graphs/contributors)
 
-Agradecemos por considerar a contribuição para o Theme Update Checker! Estamos ansiosos para ver o que você pode adicionar!
+## Contribuição
+
+Contribuições são bem-vindas! Por favor, leia o [guia de contribuição](CONTRIBUTING.md) para obter mais detalhes sobre como enviar solicitações pull, relatar problemas, etc.
 
 
 
