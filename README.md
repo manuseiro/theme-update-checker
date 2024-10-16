@@ -48,14 +48,14 @@ Para que a biblioteca funcione corretamente, é necessário criar releases e ass
 
 GitHub. Siga os passos abaixo:
 1. Vá para a página do seu repositório no GitHub.
-2. Clique na aba Releases na parte superior.
-3. Clique no botão Draft a new release.
+2. Clique na aba `Releases` na parte superior.
+3. Clique no botão `Draft a new release`.
 4. Preencha os campos:
 - Tag version: A tag correspondente à versão do seu tema, por exemplo, v1.0.0.
 - Release title: Um título descritivo para a release.
 - Description: Descrição detalhada das mudanças nesta versão.
-5. Faça upload do arquivo zip do seu tema no campo "Attach binaries by dropping them here or selecting them".
-6. Clique em Publish release.
+5. Faça upload do arquivo `zip` do seu tema no campo "Attach binaries by dropping them here or selecting them".
+6. Clique em `Publish release`.
 
 ### Passo 5: Atualizar o style.css
 
